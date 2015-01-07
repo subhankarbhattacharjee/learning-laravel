@@ -1,0 +1,1 @@
+/home/dev1/Workspace/php/learning-laravel/app/views/posts/index.blade.php
