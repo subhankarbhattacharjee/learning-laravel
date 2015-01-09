@@ -26,7 +26,7 @@ $app = new Illuminate\Foundation\Application;
 
 $env = $app->detectEnvironment(array(
 
-	'local' => array('homestead','brandsoft-dev1'),
+	'local' => array('homestead','brandsoft-dev1','nandini-desktop'),
 
 ));
 

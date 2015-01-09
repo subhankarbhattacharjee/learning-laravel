@@ -16,4 +16,7 @@ Route::get('/', function()
 	return View::make('hello');
 });
 
-Route::resource('posts', 'PostsController');
+Route::group(array('prefix'=>'admin','namespace' => 'admin'),function() {
+	Route::resource('posts', 'PostsController');
+});
+
