@@ -1,1 +1,9 @@
-/home/dev1/Workspace/php/learning-laravel/app/views/posts/create.blade.php
+@extends('admin._layouts.admin')
+
+@section('content')
+
+<h1>Create Post</h1>
+	{{ Form::open(array('route' => 'admin.posts.store','method' => 'post'))}}
+		@include('admin.posts._partials.form')
+	{{ Form::close()}}
+@stop

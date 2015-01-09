@@ -3,6 +3,9 @@ namespace admin;
 
 use Post;
 use View;
+use Validator;
+use Input;
+use Redirect;
 
 class PostsController extends \BaseController {
 
