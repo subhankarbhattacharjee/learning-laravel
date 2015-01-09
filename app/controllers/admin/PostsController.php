@@ -51,19 +51,6 @@ class PostsController extends \BaseController {
 	}
 
 	/**
-	 * Display the specified post.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function show($id)
-	{
-		$post = Post::findOrFail($id);
-
-		return View::make('admin.posts.show', compact('post'));
-	}
-
-	/**
 	 * Show the form for editing the specified post.
 	 *
 	 * @param  int  $id
