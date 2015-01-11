@@ -17,6 +17,12 @@ Route::get('/', function()
 });
 
 Route::group(array('prefix'=>'admin','namespace' => 'admin'),function() {
-	Route::resource('posts', 'PostsController');
+	Route::get('login', 'AuthController@getLogin');
+	Route::post('login', array('as'=>'admin.auth.login','uses'=>'AuthController@postLogin'));
+	Route::get('logout', array('as'=>'admin.auth.logout','uses'=>'AuthController@logout'));
+});
+
+Route::group(array('prefix'=>'admin','namespace' => 'admin','before' => 'auth'),function() {
+	Route::resource('posts', 'PostsController',array('except' => array('show')));
 });
 
